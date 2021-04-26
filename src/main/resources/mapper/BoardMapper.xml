@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gpu.nipa.BoardMapper">
+
+	<select id="getXpu" parameterType="com.gpu.nipa.xpu.form.XpuForm"
+			resultType="com.gpu.nipa.xpu.form.XpuForm">
+		SELECT time, type, no, per
+		FROM xpudata
+		ORDER BY time DESC limit 3
+	</select>
+</mapper>
+
